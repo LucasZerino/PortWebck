@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Abstract - Creative Agency Personal Portfolio Template',
+    title: 'Webck - Portfolio',
     description:
       'Abstract is a beautiful template built using React and Gatsby for creative agency or personal projects',
   },
