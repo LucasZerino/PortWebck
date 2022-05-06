@@ -38,11 +38,6 @@ class Hero extends React.Component {
         const Section = styled.section`
         
             position: relative;
-            .particles {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-            }
             background-image: url(${this.props.background.childImageSharp.fluid.src});
             background-size: cover;
             background-repeat: no-repeat;

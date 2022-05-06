@@ -1,7 +1,7 @@
 ---
 id: 5
 image: './image.jpg'
-title: "UI Deisgn for Company"
-category: "UI/UX Design"
-link: "https://github.com"
+title: "Sistemas de Gestão"
+category: "Gerencie o seu negocio de uma maneira simples e sofisticada"
+link: "https://dashboard-hotel.vercel.app/"
 ---

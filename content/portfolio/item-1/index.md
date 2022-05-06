@@ -1,7 +1,7 @@
 ---
 id: 1
 image: './image.jpg'
-title: "Front-end Development"
-category: "React.js"
-link: "https://github.com"
+title: "Para o seu Restaurante"
+category: "Landing Page"
+link: "https://webck.com.br/portifolio/restaurante/"
 ---
