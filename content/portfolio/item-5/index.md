@@ -1,7 +1,7 @@
 ---
 id: 5
 image: './image.jpg'
-title: "Sistemas de Gestão"
+title: "Página Institucional"
 category: "Gerencie o seu negocio de uma maneira simples e sofisticada"
-link: "https://dashboard-hotel.vercel.app/"
+link: "https://delfhimudan-as.vercel.app/"
 ---

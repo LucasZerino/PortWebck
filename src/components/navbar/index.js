@@ -157,7 +157,6 @@ class Navbar extends React.Component {
                     <Nav className={`navbar navbar-expand-sm ${this.state.collapse === true ? 'expand' : 'hidden_mobile'}`}>
                         <NavInner className={`navbar-collapse collapse ${this.state.collapse === true ? 'show' : ''}`}>
                             <div className="navbar-nav">{this.navItems()}</div>
-                           <a href='/rastreio'>Rastreador</a>  
                         </NavInner>
                     </Nav>
                 </NavbarContainer>
