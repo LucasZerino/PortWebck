@@ -22,6 +22,11 @@ class TabsPart extends React.Component {
         `
         const TabSelectors = styled.div`
             display: flex;
+            @media (max-width:500px) {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 15px;
+            }
         `
         
         const ColorAnimation = keyframes`
