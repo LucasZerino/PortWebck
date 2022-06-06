@@ -65,7 +65,6 @@ class HeroPersonal extends React.Component {
             width: 100%;
             display: flex;
             align-items: center;
-            background-color: rgba(0,0,0,.7);
             
         `
 
@@ -197,7 +196,6 @@ class HeroPersonal extends React.Component {
                             </form>
                         </Form>
                     </HeadingBox>
-                    {this.shapes()}
                 </Overlay>
             </Section>
         )

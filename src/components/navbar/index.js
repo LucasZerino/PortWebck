@@ -54,21 +54,14 @@ class Navbar extends React.Component {
 
     render() {
 
+        
+
         const NavbarWrapper = styled.div`
             position: absolute;
             z-index: 1;
             width: 100%;
             padding: 20px 0;
             z-index: 100;
-            a{
-                color: #fff;
-                padding: 10px;
-                font-size: 100%;
-                text-transform: uppercase;
-            }
-            a:hover{
-                color: #04E5E5;
-            }
             &.sticky {
                 position: fixed;
                 background-color: rgba(0,0,0,.8);
@@ -102,7 +95,7 @@ class Navbar extends React.Component {
                 background-color: rgba(0,0,0,.8);
                 margin-top: 20px;
                 &.hidden_mobile {
-                    display: none;
+                    display: flex;
                 }
             }
         `
@@ -128,7 +121,107 @@ class Navbar extends React.Component {
         `
 
         const NavInner = styled.div`
+        .ancora{
+            z-index: 95;
+            position: relative;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0,0,0,0.5);
+            overflow: hidden;
+            text-decoration: none;
+            letter-spacing: 1px;
+            color: white;
+            text-align: center;
+            font-weight: 400;
+            width: 50px;
+            height: 20px;
+            transition: 1s;
+            -webkit-box-reflect: below 1px linear-gradient(tranparent, #0004);
+        }
+        .ancora:hover{
+            background: #04e5e5;
+            box-shadow: 0 0 10px #04e5e5;
+            0 0 30px #04e5e5;
+            0 0 60px #04e5e5;
+            0 0 100px #04e5e5;
+        }
+        .ancora::before{
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 500%;
+            background: #04e5e5;
+            transition: 1s;
+            animation: animate 2s linear infinite;
+        }
+        .ancora:hover::before{
+            width: 100%;
+        }
+
+        .ancora::after{
+            content: '';
+            position: absolute;
+            inset: 4px;
+            background: #333;
+        }
+        .ancora:hover::after{
+            background: #333;
+            color: red;
+        }
+
+        .spanBotao{
+            position: relative;
+            z-index: 91;
+            font-size: 0.7em;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.5s;
+            color: #04e5e5;
+        }
+
+
+        .ancora:hover .spanBotao{
+            z-index: 91;
+            letter-spacing: 3px;
+            opacity: 1;
+            color: #04e5e5;
+        }
+
+        @keyframes animate {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{transform rotate(360deg);}
+        }
+
+        @media (max-width: 500px) {
+          .ancora{
+            width: 30px;
+            height: 20px;
+          }
+          
+        }
+        a{
+            color: #fff;
+            padding: 10px;
+            font-size: 100%;
+            text-transform: uppercase;
+        }
+        a:hover{
+            color: #04E5E5;
+        }
+
+        .centro{
+            display: flex;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+        }
             justify-content: flex-end;
+            
         `
 
         const Toggler = styled.button`
@@ -136,7 +229,7 @@ class Navbar extends React.Component {
             position: absolute;
             right: 0;
             top: 0;
-            @media (min-width: 500px) {
+            @media (min-width: 700px) {
                 display: none;
             }
         `
@@ -152,11 +245,14 @@ class Navbar extends React.Component {
                         onClick={() => this.collapseNav()}
                         className="navbar-toggler navbar-toggler-right"
                     >
-                        <FontAwesomeIcon icon={faBars} className="bars" />
+                       <FontAwesomeIcon icon={faBars} className="bars" />
                     </Toggler>
                     <Nav className={`navbar navbar-expand-sm ${this.state.collapse === true ? 'expand' : 'hidden_mobile'}`}>
                         <NavInner className={`navbar-collapse collapse ${this.state.collapse === true ? 'show' : ''}`}>
                             <div className="navbar-nav">{this.navItems()}</div>
+                            <div className='centro'>
+                            <a className='ancora' target="_blank" href='https://webck.com.br/rastreio'><span className='spanBotao'>Rastreador</span></a>
+                            </div>
                         </NavInner>
                     </Nav>
                 </NavbarContainer>

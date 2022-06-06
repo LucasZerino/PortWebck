@@ -1,51 +1,201 @@
 import React from 'react'
-import { Container } from 'react-bootstrap'
+import { Row, Col, Container } from 'react-bootstrap'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import AnimationContainer from '../../components/animation-container'
-import TestimonialsThreePart from './parts/TestimonialsThreePart.js'
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
 import AnimatedHeading from '../../components/animated-heading'
 
-class TestimonialsThree extends React.Component {
+class ClientsOne extends React.Component {
 
-    constructor(props) {
-        super(props)
-        this.state = {
-            active: 0
-        }
+
+    shouldComponentUpdate() {
+      return false
     }
+  
+
     render() {
         const Section = styled.section`
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             position: relative;
             overflow: hidden;
-            background-size: cover;     
-        `
-
-        const TestimonialContainer = styled.div`
+            background-color: transparent;
+            background-size: cover;
             padding: 100px 0;
-            @media (max-width: 767px) {
-                padding: 50px 10px;
+            .ancora{
+              z-index: 95;
+              margin-top: 150px;
+              position: relative;
+              top: 20px;
+              padding: 20px 60px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background: rgba(0,0,0,0.5);
+              overflow: hidden;
+              text-decoration: none;
+              letter-spacing: 1px;
+              color: white;
+              text-align: center;
+              font-weight: 400;
+              width: 500px;
+              height: 120px;
+              transition: 1s;
+              -webkit-box-reflect: below 1px linear-gradient(tranparent, #0004);
+          }
+          .ancora:hover{
+              background: #04e5e5;
+              box-shadow: 0 0 10px #04e5e5;
+              0 0 30px #04e5e5;
+              0 0 60px #04e5e5;
+              0 0 100px #04e5e5;
+          }
+          .ancora::before{
+              content: '';
+              position: absolute;
+              width: 40px;
+              height: 500%;
+              background: #04e5e5;
+              transition: 1s;
+              animation: animate 2s linear infinite;
+          }
+          .ancora:hover::before{
+              width: 100%;
+          }
+
+          .ancora::after{
+              content: '';
+              position: absolute;
+              inset: 4px;
+              background: #333;
+          }
+          .ancora:hover::after{
+              background: #333;
+              color: red;
+          }
+
+          .spanBotao{
+              position: relative;
+              z-index: 91;
+              font-size: 1.5em;
+              opacity: 0.8;
+              text-transform: uppercase;
+              letter-spacing: 4px;
+              transition: 0.5s;
+              color: #04e5e5;
+          }
+
+
+          .ancora:hover .spanBotao{
+              z-index: 91;
+              font-size: 1.5em;
+              opacity: 1;
+              color: #04e5e5;
+          }
+
+          @keyframes animate {
+              0%{
+                  transform: rotate(0deg);
+              }
+              100%{transform rotate(360deg);}
+          }
+
+          @media (max-width: 500px) {
+            .ancora{
+              width: 300px;
+              height: 120px;
+            }
+            
+          }
+           
+           
+          }
+        `
+        
+        
+        const Heading = styled.a `
+        position: relative;
+            .heading{
+              position: relative;
+              width: 100%;
+              height: 100%;
+               z-index: -99;
             }
         `
 
+      const LeftCol = styled(Col)`
+          display: flex;
+          align-items: center;
+      `
+
+
+      const particlesInit = async (main) => {
+        console.log(main);
+    
+        // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
+        // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+        // starting from v2 you can add only the features you need reducing the bundle size
+        await loadFull(main);
+      };
+    
+      const particlesLoaded = (container) => {
+        console.log(container);
+      };
 
 
 
         return(
-            <Section id="avaliações">
-                <TestimonialContainer>
-                    <Container>
-                      <AnimatedHeading text="Avaliações Recentes" />
-                      <AnimationContainer animation="fadeIn">
-                        <TestimonialsThreePart testimonials={this.props.testimonials} quotation_up={this.props.quotation_up} quotation_down={this.props.quotation_down}  />
-                      </AnimationContainer>
-                    </Container>
-                </TestimonialContainer>
+            <Section id="Portfolio">
+                <AnimatedHeading text="Conheça nossos trabalhos" />
+                <a className='ancora' target="_blank" href='portfolio'><span className='spanBotao'>PORTFOLIO WEBCK</span></a>
+                  <Heading>
+                    <div className='heading'>
+                 
+                    </div>
+                  </Heading>
             </Section>
         )
     }
 
- 
+    clients() {
+      return this.props.clients.map((value, index) => {
+        const Client = styled.img`
+            height: 100px;
+        `
+
+        const ClientCol = styled(Col)`
+            text-align: center;
+            padding: 20px 0;
+            border-color: #efefef;
+            border-left: none;
+            border-top: none;
+            transition: .1s;
+            &:hover {
+              transform: scale(1.1);
+              background-color: #04e5e5;
+              z-index: 5;
+              border-radius: 10px;
+            }
+            @media (max-width: 500px) {
+              border: none !important;
+            }
+        `
+          return (
+              <ClientCol md={3} key={index} style={{borderRight: (index+1)%4 === 0 ? "none" : "1px solid", borderBottom: index < 8 ? "1px solid" : "none"}}>
+                  <AnimationContainer animation="fadeIn slower" delay={index*200}>
+                    <Client
+                      src={value.node.childImageSharp.fluid.src}
+                      alt="Client"
+                    />
+                  </AnimationContainer>
+              </ClientCol>
+          )
+      })
+    }
 
 }
 
@@ -53,48 +203,19 @@ export default props => (
     <StaticQuery
       query={graphql`
       query {
-        quotation_up: file(relativePath: {eq: "quotation-up.png"}) {
-            childImageSharp {
-              fluid(maxWidth: 500) {
-                src
-              }
-            }
-          }
-          quotation_down: file(relativePath: {eq: "quotation-down.png"}) {
-            childImageSharp {
-              fluid(maxWidth: 500) {
-                src
-              }
-            }
-          }
-          testimonials: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(testimonials)/"}}, sort: {fields: [frontmatter___id], order: ASC}) {
-            edges {
-              content: node {
-                frontmatter {
-                  id
-                  name
-                  profession
-                  text
-                  image {
-                    childImageSharp {
-                      fluid(maxWidth: 200, maxHeight: 200) {
-                        src
-                      }
-                    }
-                  }
-                  large {
-                    childImageSharp {
-                      fluid(maxWidth: 2000, maxHeight: 2000) {
-                        src
-                      }
-                    }
-                  }
+        clients: allFile(filter: {extension: {regex: "/(png)/"}, relativeDirectory: {eq: "clients"}}) {
+          edges {
+            node {
+              childImageSharp {
+                fluid(maxWidth: 500) {
+                  src
                 }
               }
             }
           }
+        }
       }      
       `}
-      render={({ quotation_up, quotation_down, testimonials }) => <TestimonialsThree quotation_up={quotation_up} quotation_down={quotation_down} testimonials={testimonials.edges} {...props} />}
+      render={({ clients }) => <ClientsOne clients={clients.edges} {...props} />}
     />
   )

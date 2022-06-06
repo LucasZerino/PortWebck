@@ -14,7 +14,7 @@ class ContactCreative extends React.Component {
         const Section = styled.section`
             position: relative;
             overflow: hidden;
-            background-color: #000;
+          
             padding: 100px 0;
         `
 
@@ -30,11 +30,7 @@ class ContactCreative extends React.Component {
             align-items: center;
         `
 
-        const Map = styled.iframe`
-            border: none;
-            height: 100%;
-            width: 100%;
-        `
+      
 
         const IconRow = styled(Row)`
             margin-top: 150px;

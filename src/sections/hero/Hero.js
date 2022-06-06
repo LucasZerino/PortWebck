@@ -38,6 +38,11 @@ class Hero extends React.Component {
         const Section = styled.section`
         
             position: relative;
+            .particles {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
             background-image: url(${this.props.background.childImageSharp.fluid.src});
             background-size: cover;
             background-repeat: no-repeat;
@@ -244,8 +249,8 @@ class Hero extends React.Component {
                                                 <ServiceSeparator/>
                                                 <ServiceText>
                                                 Inovamos desenvolvendo soluções centradas na resolução de problemas da sua empresa, focando
-                                                na eXperiência de Usuário (UX/UI). Aplicações Web e Mobile, Sites Institucionais, Landing Pages
-                                                e muito mais.
+                                                na experiência de usuário (UX/UI). Aplicações Web e Mobile, Sites Institucionais, Landing Pages
+                                                e muito mais.<br/><br/><br/>
                                                 </ServiceText>
                                             </ServiceContent>
                                         </Service>
@@ -259,7 +264,7 @@ class Hero extends React.Component {
                                                 <ServiceHeading>Sua Empresa Online</ServiceHeading>
                                                 <ServiceSeparator/>
                                                 <ServiceText>
-                                                Hospede a página da sua empresa, Seu Sistema de Gestão ou qualquer outra Solução. 
+                                                Hospede a página da sua empresa, seu sistema de Gestão ou qualquer outra solução. 
                                                 Coloque seu processo de vendas para atuar online diminuindo assim seu custo em adquirir 
                                                 um novo cliente. 
                                                 Nossos consultores em Marketing Estratégico te ajudarão dando toda a assessoria e 
@@ -278,7 +283,7 @@ class Hero extends React.Component {
                                                 <ServiceSeparator/>
                                                 <ServiceText>
                                                 Lei Geral de Proteção de Dados (LGPD), Assinatura/Aceite Eletrônico, Compliance... 
-                                                O que esses tópicas se relacionam com sua empresa? Todos! A não ADEQUAÇÃO dos Contratos, Fluxos Empresariais
+                                                O que esses tópicas se relacionam com sua empresa? Todos! A não adequação dos contratos, Fluxos Empresariais
                                                 e Sistemas geridos pela empresa podem gerar multas e processos judiciais. Temos profissionais aptos a 
                                                 resolver. 
                                                 </ServiceText>

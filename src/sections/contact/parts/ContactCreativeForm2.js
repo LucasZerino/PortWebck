@@ -161,7 +161,7 @@ class ContactThreeForm extends React.Component {
             </InputElement>
             <input type="hidden" name="dfsChave" id="dfsChave" value="628bc412e6b93be09f1c1e638ca0f2c738a6dd2505cdc684de7343f682e9c645559ffc130babc9bd08f7c980536e2f8e25dca289c7805553e84b7442fb5f8146" />
             <Submit>
-            <input type="submit" name="pbEntrar" value="Entrar"/>
+            <input type="submit" name="pbEntrar" value="ENTRAR"/>
             </Submit>
             </form>
           </ContactForm>

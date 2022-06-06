@@ -190,7 +190,7 @@ class ServicesOne extends React.Component {
                                                 Análise de Brechas na Segurança Digital 
                                             </ServiceListElement>
                                             <ServiceListElement>
-                                                Adequação dos Processos Interno às Exigências da LGPD
+                                            Adequação dos processos internos de acordo com as exigências da LGPD.
                                             </ServiceListElement>
                                             <ServiceListElement>
                                                 Hardening de Sistemas Online
@@ -241,7 +241,7 @@ class ServicesOne extends React.Component {
                                                     CRM / ERP
                                                 </ServiceListElement>
                                                 <ServiceListElement>
-                                                    Ferramentas Suporte ao Cliente, Chatbos
+                                                Ferramentas de suporte ao cliente (Chatbots)
                                                 </ServiceListElement>
                                                 <ServiceListElement>
                                                     Integração de Sistemas
