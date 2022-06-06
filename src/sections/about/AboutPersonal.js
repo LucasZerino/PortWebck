@@ -174,11 +174,9 @@ class AboutPersonal extends React.Component {
                                 <Heading>WEBCK</Heading>
                                 <Separator />
                                 <Text>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of 
-                                    type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-                                    It was popularised in the 1960s with the release of 
-                                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                Inovamos desenvolvendo soluções centradas na resolução de problemas da sua empresa, focando na eXperiência de Usuário (UX/UI). Aplicações Web e Mobile, Sites Institucionais, Landing Pages e no desenvolvimento de estratégias avançadas em Marketing. 
+Através de sua Software House, a Webck ajuda empresas e empresários a integrar e automatizar seus processos e fluxos, reduzindo assim erros, falhas de segurança e, por outro lado, aumentando a performance e eficiência de seus colaboradores. 
+
                                 </Text>
                                 <TabsPart />
                             </AnimationContainer>

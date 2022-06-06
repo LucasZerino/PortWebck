@@ -97,11 +97,12 @@ class TabsPart extends React.Component {
                     <Tab style={{
                         display: this.state.tab === "skills" ? "block" : "none"
                     }}>
-                        <Progress value={90} text="Landing Page" />
-                        <Progress value={80} text="Páginas Institucionais" />
-                        <Progress value={10} text="Marketing Estratégico" />
-                        <Progress value={100} text="Sistemas de Gestão" />
-                        <Progress value={80} text="Gestão de Marketing" />
+                        <Progress value={90} text="Integração e Automação de Sistemas" />
+                        <Progress value={80} text="Marketing Estratégico" />
+                        <Progress value={70} text="Desenvolvimento de Sites e Sistemas Web" />
+                        <Progress value={100} text="Adequação e Conformidade à LGPD" />
+                        <Progress value={80} text="Gestão de Frotas" />
+                        <Progress value={80} text="Hosting e Compliance" />
                     </Tab>
                 </Tabs>
                 <Tabs>
@@ -111,9 +112,8 @@ class TabsPart extends React.Component {
                         <Timeline data={{
                                 "2019 - 2022" :  {
                                     title: "Software House",
-                                    institution: "Lorem Softwares",
-                                    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting"
-                                },  
+                                    institution: "Inovação",
+                                    description: "A Webck ajuda empresas e empresários a integrar e automatizar seus processos e fluxos, , reduzindo assim erros, falhas de segurança e, por outro lado, aumentando a performance e eficiência de seus colaboradores."},  
                             }
                         }
                     />
@@ -125,7 +125,7 @@ class TabsPart extends React.Component {
                                 "Webck" :  {
                                     title: "Telefone: (84) 3013 4747",
                                     institution: "Email: contato@webck.com.br",
-                                    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting"
+                                    description: "Entre em contato conosco se buscar inovação e tecnologia para sua empresa!"
                                 },
                             }
                         }
